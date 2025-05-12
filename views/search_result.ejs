@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+<h2>Search Results</h2>
+<% allbooks.forEach(book => { %>
+  <div>
+    <img src="<%= book.image %>" width="100">
+    <h3><%= book.title %></h3>
+    <h3>Author:<%= book.author%></h3>
+    <p>Publish date:<%=book.date%></p> 
+    <form action="/addtofav" method="get">
+      <input type="hidden" name="title" value="<%=book.title %>">
+      <input type="hidden" name="author" value="<%=book.author %>">
+      <input type="hidden" name="image" value="<%= book.image %>">
+      <button type="submit">Add to Wishlist</button>
+  </form>
+  </div>
+  
+<% }); %>

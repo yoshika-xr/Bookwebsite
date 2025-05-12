@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+
+<h2>Add to Favorite</h2>
+<div>
+  <form action="/addtofav" method="post">
+    <input type="hidden" name="title" value="<%= title %>">
+    <input type="hidden" name="author" value="<%= author %>">
+    <input type="hidden" name="image" value="<%= image %>">
+
+    <label for="score">Your score (1–10):</label>
+    <input type="number" id="score" name="score" min="1" max="10" required>
+
+    <label for="reason">Why did you like it?</label>
+    <textarea id="reason" name="reason" rows="4" required></textarea>
+
+    <label for="recommend">Would you recommend this book?</label>
+    <select id="recommend" name="recommend">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <button type="submit">Add to Favorite 🩷</button>
+  </form>
+</div>
