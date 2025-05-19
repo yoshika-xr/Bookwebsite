@@ -1,8 +1,10 @@
 {
   "dependencies": {
     "axios": "^1.9.0",
+    "connect-flash": "^0.1.1",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
+    "express-session": "^1.18.1",
     "pg": "^8.15.6"
   },
   "type": "module",

@@ -1,0 +1,11 @@
+<%- include("partials/header.ejs") %>
+<% allbooks.forEach(book => { %>
+  <div>
+    <h3><%= book.title %></h3>
+    <p><%= book.author %></p>
+    <img src="<%= book.image %>" width="100" />
+
+    <!-- Delete button -->
+    <button><a href="/deletefav/<%= book.id %>">❌ Remove from Favorites</a></button>
+  </div>
+<% }) %>

@@ -7,6 +7,7 @@
     <h3>Author:<%= book.author%></h3>
     <p>Publish date:<%=book.date%></p> 
     <form action="/addtofav" method="get">
+      <input type="hidden" name="id" value="<%=book.id %>">
       <input type="hidden" name="title" value="<%=book.title %>">
       <input type="hidden" name="author" value="<%=book.author %>">
       <input type="hidden" name="image" value="<%= book.image %>">

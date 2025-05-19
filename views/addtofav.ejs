@@ -3,6 +3,7 @@
 <h2>Add to Favorite</h2>
 <div>
   <form action="/addtofav" method="post">
+    <input type="hidden" name="id" value="<%= id %>">
     <input type="hidden" name="title" value="<%= title %>">
     <input type="hidden" name="author" value="<%= author %>">
     <input type="hidden" name="image" value="<%= image %>">

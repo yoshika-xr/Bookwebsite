@@ -8,6 +8,7 @@
     <p>Score: <%= book.score %></p>
     <p>Why you liked it: <%= book.reason %></p>
     <p>Would recommend: <%= book.recommend %></p>
+    <a href="/deletefav/<%= encodeURIComponent(book.id) %>">❌ Remove from Favorites</a>
   </div>
 <% }); %>
 
