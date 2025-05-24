@@ -32,7 +32,7 @@ app.post("/search", async (req,res)=>{
     const apiurl=`https://openlibrary.org/search.json?q=${result}`;
     try{
       const response = await axios.get(apiurl);
-      const books = response.data.docs.slice(0, 10).map(book => ({        title: book.title || 'No title',
+      const books = response.data.docs.slice(0, 12).map(book => ({        title: book.title || 'No title',
         id:book.key ||"no id",
         author: book.author_name?.join(', ') || 'Unknown',
         image: book.cover_i
@@ -45,7 +45,7 @@ app.post("/search", async (req,res)=>{
     res.render("search_result.ejs",{allbooks:searchBook});
   }catch(error){
     console.error(error);
-    res.status(500).json({error:'failed to fetch book information'});
+    res.send('Book is not found');
   }
 });
 app.get("/search",async (req,res)=>{

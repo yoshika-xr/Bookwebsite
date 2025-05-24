@@ -1,64 +1,138 @@
+body{
+    background: linear-gradient(to botttom,rgb(225, 225, 230), gray);
+}
+.bgbook{
+  margin-left:50% ;
+}
 .search-div {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
-  justify-items: center;
-  /* margin-top: 30px;
-  margin-left:30px; */
+  margin-top: 30px;
+  justify-content:space-between;
 }
+.searchtitle{
+  text-align: center;
+}
+
 .card {
   width: 300px;
   height: 290px;
-  background: rgb(45, 45, 45);
-  transition: all 0.4s;
+  margin-top:20px;
+  background: linear-gradient(to bottom, rgb(255, 136, 255), rgb(172, 70, 255));
+  transition: all 0.4s ease;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
-  font-size:0px;
-  font-weight: 900;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  color: white;
 }
 
 .card:hover {
   border-radius: 15px;
   cursor: pointer;
-  transform: scale(1.2);
-  box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
-  background: rgb(0, 0, 0);
+  transform: scale(1.1);
+  background:black
 }
 
 .first-content {
   height: 100%;
   width: 100%;
-  transition: all 0.4s;
+  transition: all 0.4s ease;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 1;
-  border-radius: 15px;
 }
 
 .card:hover .first-content {
-  height: 0px;
+  height: 0;
   opacity: 0;
+  overflow: hidden;
 }
 
 .second-content {
-  height: 0%;
+  height: 0;
   width: 100%;
-  color:white;
   opacity: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 15px;
-  transition: all 0.4s;
-  font-size:1px;
-  transform: rotate(90deg) scale(-1);
+  padding: 20px;
+  transition: all 0.4s ease;
+  transform: rotateX(90deg);
+  font-size: 1rem;
 }
 
 .card:hover .second-content {
-  opacity: 1;
   height: 100%;
-  font-size: 1.2rem;
-  transform: rotate(0deg);
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+.second-content h3,
+.second-content p {
+  margin: 5px 0;
+  text-align: center;
+}
+.bookmarkBtn {
+  width: 80%;
+  height: 40px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.349);
+  background-color: rgb(12, 12, 12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  margin-left:20px;
+}
+
+.IconContainer {
+  width: 100px;
+  height: 30px;
+  background: linear-gradient(to bottom, rgb(255, 136, 255), rgb(172, 70, 255));
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  transition-duration: 0.3s;
+}
+
+.icon {
+  border-radius: 1px;
+}
+
+.text {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 1;
+  transition-duration: 0.3s;
+  font-size: 1.04em;
+}
+
+.bookmarkBtn:hover .IconContainer {
+  width: 70%;
+  transition-duration: 0.3s;
+}
+
+.bookmarkBtn:hover .text {
+  transform: translate(10px);
+  width: 0;
+  font-size: 0;
+  transition-duration: 0.3s;
+}
+
+.bookmarkBtn:active {
+  transform: scale(0.95);
+  transition-duration: 0.3s;
 }
