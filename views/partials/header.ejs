@@ -17,38 +17,20 @@
     ></script>
     <link rel="stylesheet" href="/style/main.css" />
   </head>
-  <body>
-    <div>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary px-3">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/">Home</a>
-          <a class="navbar-brand" href="/search">Movie</a>
-          <a class="navbar-brand" href="">Sign in</a>
-          <a class="navbar-brand" href="">Login</a>
-          <form
-            class="d-flex ms-auto me-3"
-            action="/search"
-            method="POST"
-            role="search"
-          >
-            <input
-              class="form-control me-2"
-              type="text"
-              name="book"
-              id="book"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
-      </nav>
-    </div>
-    <div> 
-      <img class=bgbook src="./images/bookbg.jpg">
-    </div>
-    <script src="index.js"></script>
-  </body>
+<body>
+  <div class="header-div">
+    <a href="/" class="logo-link">
+      <img class="logo" src="./images/logo.jpg" height="50" width="50" alt="Logo" />
+    </a>
+    <nav class="navbar">
+      <a class="navbar-brand" href="/">Home</a>
+      <a class="navbar-brand" href="/search">Movie</a>
+      <a class="navbar-brand" href="#">Sign in</a>
+      <a class="navbar-brand" href="#">Login</a>
+    </nav>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
 </html>
