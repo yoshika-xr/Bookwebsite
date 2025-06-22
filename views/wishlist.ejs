@@ -1,14 +1,19 @@
 <%- include("partials/header.ejs") %>
 <h2>Your Wishlist</h2>
-<% books.forEach(book => { %>
-  <div>
-    <img src="<%= book.image %>" width="100">
-    <h3><%= book.title %></h3>
-    <p>Author: <%= book.author %></p>
-    <p>Score: <%= book.score %></p>
-    <p>Why you liked it: <%= book.reason %></p>
-    <p>Would recommend: <%= book.recommend %></p>
-    <a href="/deletefav/<%= encodeURIComponent(book.id) %>"><button>add to delete</button></a>
-  </div>
-<% }); %>
+<div class="wishlist-container">
+  <% books.forEach(book => { %>
+    <div class="wishlist-card">
+      <img src="<%= book.image %>" width="100" class="wishlist-img">
+      <h3><%= book.title %></h3>
+      <p><strong>Author:</strong> <%= book.author %></p>
+      <p><strong>Score:</strong> <%= book.score %></p>
+      <p><strong>Why you liked it:</strong> <%= book.reason %></p>
+      <p><strong>Would recommend:</strong> <%= book.recommend %></p>
+      <a href="/deletefav/<%= encodeURIComponent(book.id) %>">
+        <button class="delete-btn">🗑️ Remove</button>
+      </a>
+    </div>
+  <% }); %>
+</div>
+
 

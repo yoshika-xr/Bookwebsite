@@ -1,8 +1,8 @@
 <%- include("partials/header.ejs") %>
 
-<h2>Add to Favorite</h2>
-<div>
-  <form action="/addtofav" method="post">
+<h2 class="addfav-title">Add to Favorite</h2>
+<div class="addfav">
+  <form action="/addtofav" method="post"  class="animated-border-form fade-slide-in">
     <input type="hidden" name="id" value="<%= id %>">
     <input type="hidden" name="title" value="<%= title %>">
     <input type="hidden" name="author" value="<%= author %>">
@@ -20,6 +20,6 @@
       <option value="no">No</option>
     </select>
 
-    <button type="submit">Add to Favorite 🩷</button>
+    <button type="submit">Add to Favorite 🩵</button>
   </form>
 </div>

@@ -1,10 +1,45 @@
 body{
-    background: linear-gradient(to botttom,rgba(206, 208, 187, 0.749), gray);
+  background-color: rgb(25, 54, 95);
 }
 .homebackground{
-  padding:10px;
-
+  height:80vh;
+  width:80vw;
+  margin-left:150px;
+  margin-top:70px;
+  /* background-color:white; */
+  /* border:1px none black;
+  border-radius:20px;
+  box-shadow: 0 0 85px rgba(0, 0, 0, 0.3); */
+  background-image:url("../images/bak2.jpg");
+  background-size:100%;
 }
+.navbar-brand{
+  color:black;
+}
+.navbar-brand:hover{
+  border-radius: 7px;
+  color: white;
+  background-color:rgb(27, 78, 144) ;
+  padding:7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+.sum-btn{
+  border:3px solid rgb(27, 78, 144) ;
+  border-radius:5px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -ms-border-radius:5px;
+  -o-border-radius:5px;
+}
+.sum-btn:hover{
+  color: white;
+ background-color:rgb(27, 78, 144) ;
+ box-shadow:5px 5px 30px rgb(27, 78, 144);
+}
+
 .home-container {
   display: flex;
   align-items: center;
@@ -21,9 +56,13 @@ body{
   margin-left:70px;
 }
 
+
 .search-form input {
   flex: 1;
   padding: 8px;
+}
+.search-form input:hover{
+  box-shadow:0 0 50px rgb(26, 82, 142);
 }
 
 .search-form button {
@@ -39,9 +78,10 @@ body{
 .bgbook img {
   max-width: 100%;
   height: auto;
+  filter: brightness(90%); 
+
 }
 .header-div {
-  background-color: rgb(196, 196, 196);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -65,6 +105,7 @@ body{
   justify-content:space-between;
 }
 .searchtitle{
+  color:white;
   text-align: center;
 }
 
@@ -72,19 +113,23 @@ body{
   width: 300px;
   height: 290px;
   margin-top:20px;
-  background: linear-gradient(to bottom, rgb(255, 136, 255), rgb(172, 70, 255));
+  background:linear-gradient(to bottom,white,rgb(27, 78, 144) );
   transition: all 0.4s ease;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.7);
   overflow: hidden;
   color: white;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
 }
 
 .card:hover {
   border-radius: 15px;
   cursor: pointer;
   transform: scale(1.1);
-  background:black
+  background:black;
 }
 
 .first-content {
@@ -94,8 +139,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 1;
-}
+  opacity: 1;}
 
 .card:hover .first-content {
   height: 0;
@@ -146,7 +190,7 @@ body{
 .IconContainer {
   width: 100px;
   height: 30px;
-  background: linear-gradient(to bottom, rgb(255, 136, 255), rgb(172, 70, 255));
+  background: linear-gradient(to bottom,white,rgb(27, 78, 144) );
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -188,4 +232,142 @@ body{
   transform: scale(0.95);
   transition-duration: 0.3s;
 }
+.addfov {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+  }
 
+  .addfav-title {
+    text-align: center;
+    color:white;
+  }
+  @keyframes borderRun {
+    0% {
+      border-image-source: linear-gradient(90deg, white, rgb(27, 78, 144) );
+    }
+    50% {
+      border-image-source: linear-gradient(90deg, rgb(27, 78, 144) , white);
+    }
+    100% {
+      border-image-source: linear-gradient(90deg, white, rgb(27, 78, 144) );
+    }
+  }
+
+  .animated-border-form {
+    max-width: 500px;
+    margin: auto;
+    padding: 25px;
+    background:linear-gradient(to right ,rgb(27, 78, 144) ,transparent);
+    border: 6px solid transparent;
+    border-image-slice: 1;
+    border-width: 4px;
+    border-image-source: linear-gradient(90deg, white, rgb(27, 78, 144));
+    animation: borderRun 3s infinite linear;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(224, 212, 212, 0.94);
+     backdrop-filter: blur(10px);      /* BLUR effect */
+  -webkit-backdrop-filter: blur(10px); 
+  }
+
+  .animated-border-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color:white;
+  }
+
+  .animated-border-form input[type="number"],
+  .animated-border-form textarea,
+  .animated-border-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+
+  .animated-border-form textarea {
+    resize: vertical;
+  }
+
+  .animated-border-form button[type="submit"] {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    background-color:rgb(27, 78, 144) ;
+    border:1px solid white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .animated-border-form button[type="submit"]:hover {
+    border:1px solid white;
+    background-color:white;
+    color:rgb(27, 78, 144) ;
+  }
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); /* starts lower */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);    /* comes to normal */
+  }
+}
+
+.fade-slide-in {
+  animation: fadeSlideIn 1s ease-out forwards;
+}
+
+.wishlist-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.wishlist-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.wishlist-card:hover {
+  transform: scale(1.03);
+}
+
+.wishlist-img {
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.delete-btn {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #cc0000;
+}
