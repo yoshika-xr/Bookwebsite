@@ -1,19 +1,24 @@
 <div class="homebackground">
 <%- include("partials/header.ejs") %>
-  <div class="home-container">
-  <form class="search-form" action="/search" method="POST" role="search">
-    <input
-    class="form-control"
-    type="text"
-      name="book"
-      id="book"
-      placeholder="Search"
-      aria-label="Search"
-      />
-      <button class="sum-btn" type="submit">Search</button>
-    </form>
-    <div class="bgbook">
-      <img src="./images/bookbg.jpg" alt="background book"/>
+
+<div class="home-container">
+  <h2 class="home-title">BookFinder Hub – Search, Explore, Discover.
+  </h2>
+  <div class=" secondhome-cont">
+    <form class="search-form" action="/search" method="POST" role="search">
+      <input
+      class="form-control"
+      type="text"
+        name="book"
+        id="book"
+        placeholder="Search"
+        aria-label="Search"
+        />
+        <button class="sum-btn" type="submit">Search</button>
+      </form>
+      <div class="bgbook">
+        <img src="./images/bookbg.jpg" alt="background book"/>
+    </div>
   </div>
   </div>
   </div>

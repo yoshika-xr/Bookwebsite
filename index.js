@@ -98,6 +98,19 @@ app.get("/deletefav/:id", async (req, res) => {
     res.status(500).send("Something went wrong.");
   }
 });
+
+app.get("/login",async(req,res)=>{
+
+  res.render("login.ejs");
+});
+
+app.post("/login",async(req,res)=> {
+  const user_data=req.body;
+  console.log(user_data);
+
+  res.redirect("/");
+  
+});
 app.listen(port, () => {
   console.log(`server is running at http://localhost${port}`);
 });
