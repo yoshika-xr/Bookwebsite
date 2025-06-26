@@ -21,8 +21,8 @@ body {
 }
 .home-title{
   display: flex;
-  color: white;
-  text-shadow: 2px 2px 16px rgba(1, 72, 139, 0.7);
+  color:rgb(2, 103, 161);
+  /* text-shadow: 2px 2px 16px black; */
   margin-bottom: 30px;
 }
 .secondhome-cont{
