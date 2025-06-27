@@ -25,6 +25,129 @@ body {
   /* text-shadow: 2px 2px 16px black; */
   margin-bottom: 30px;
 }
+/* Make logo and nav responsive */
+.header-div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+/* Make navbar items stack on small screens */
+.navbar {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.dropdown{
+  display: none;
+}
+/* Responsive layout changes for smaller screens */
+@media (max-width: 768px) {
+  .homebackground {
+    width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-size: cover;
+    padding: 10px;
+  }
+
+  .secondhome-cont {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .home-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .logo {
+    height: 40px;
+    width: 40px;
+  }
+  .navbar-menu{
+    display: none;
+  }
+  .dropdown{
+    display: flex;
+    margin-left: 90%;
+  }
+  .btn-close{
+    font-size:1.0rem;
+    background-color: #023568;
+    color:rgb(0, 0, 0);
+  }
+  .btn-close:hover{
+    color:#064287;
+  }
+  
+  .bgbook {
+    flex: 1;
+    max-width: 50%;
+    text-align: right;
+  }
+
+  .bgbook img {
+    max-width: 100%;
+    height: auto;
+    filter: brightness(90%);
+  }
+  .search-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex: 3;
+    max-width: 80%;
+    margin-top: 80px;
+    margin-left: 70px;
+  }
+
+  .search-form input {
+    flex: 3;
+    padding: 8px;
+  }
+  .search-form input:hover {
+    box-shadow: 0 0 50px rgb(26, 82, 142);
+  }
+
+  .search-form button {
+   padding: 8px 16px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 1.2rem;
+  }
+
+  .sum-btn {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+.navbar-menu{
+    display: none;
+  }
+  .dropdown{
+    display: flex;
+    margin-left: 90%;
+  }
+  .btn-close{
+    font-size:1.0rem;
+    background-color: #023568;
+    color:rgb(0, 0, 0);
+  }
+  .btn-close:hover{
+    color:#064287;
+  }
+  }
+
 .secondhome-cont{
   display: flex;
   gap: 40px;
@@ -45,6 +168,7 @@ body {
   -o-border-radius: 7px;
 }
 .sum-btn {
+  display: flex;
   border: 3px solid rgb(27, 78, 144);
   border-radius: 5px;
   -webkit-border-radius: 5px;

@@ -18,16 +18,26 @@
     <link rel="stylesheet" href="/style/main.css" />
   </head>
 <body>
+  <div class="dropdown">
+  <button class="btn-close" type="button" data-bs-toggle="dropdown" aria-expanded="close">
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/">Home</a></li>
+    <li><a class="dropdown-item" href="/search">Book</a></li>
+    <li><a class="dropdown-item" href="/wishlist">Wishlist</a></li>
+    <li><a class="dropdown-item" href="/login">Login</a></li>
+  </ul>
+</div>
   <div class="header-div">
-    <a href="/" class="logo-link">
       <img class="logo" src="./images/logo.jpg" height="50" width="50" alt="Logo" />
-    </a>
-    <nav class="navbar">
-      <a class="navbar-brand" href="/">Home</a>
-      <a class="navbar-brand" href="/search">Movie</a>
-      <a class="navbar-brand" href="/wishlist">Wishlist</a>
-      <a class="navbar-brand" href="/login">Login</a>
-    </nav>
+      <div class="navbar-menu">
+        <nav class="navbar">
+          <a class="navbar-brand" href="/">Home</a>
+          <a class="navbar-brand" href="/search">Book</a>
+          <a class="navbar-brand" href="/wishlist">Wishlist</a>
+          <a class="navbar-brand" href="/login">Login</a>
+        </nav>
+      </div>
   </div>
   <script src="index.js"></script>
 </body>
